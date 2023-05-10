@@ -14,6 +14,13 @@ $(call inherit-product, device/xiaomi/haydn/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# GAPPS flag
+WITH_GAPPS := 1
+
+# Alpha prop
+ALPHA_BUILD_TYPE := unofficial
+ALPHA_MAINTAINER := phoenix
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := haydn
 PRODUCT_MANUFACTURER := Xiaomi
@@ -23,12 +30,11 @@ PRODUCT_NAME := lineage_haydn
 PRODUCT_SYSTEM_NAME := haydn_global
 PRODUCT_SYSTEM_DEVICE := haydn
 
-# RisingOS
-RISING_MAINTAINER := Akshay
-RISING_CHIPSET := Snapdragon®888
-TARGET_EXCLUDES_APERTURE := false
-TARGET_CORE_GMS := false
+# Alpha device prop
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_EXCLUDES_AUDIOFX := true
 TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_APERTURE := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="haydn_global-user 13 TKQ1.220829.002 V14.0.3.0.TKKMIXM release-keys" \
