@@ -15,7 +15,7 @@ $(call inherit-product, device/xiaomi/haydn/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # GAPPS flag
-WITH_GAPPS := 2
+WITH_GAPPS := 1
 
 # Alpha prop
 ALPHA_BUILD_TYPE := unofficial
