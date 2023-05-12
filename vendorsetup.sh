@@ -28,10 +28,4 @@ rm -rf hardware/xiaomi && git clone https://github.com/LineageOS/android_hardwar
 echo 'Cloning Leica Camera [7/7]'
 git clone https://gitlab.com/Alucard_Storm/haydn-miuicamera -b thirteen-leica vendor/xiaomi/haydn-miuicamera
 
-echo 'patch: Expose aux camera if packagename is null'
-cd frameworks/base
-wget https://github.com/Octavi-Staging/android_frameworks_base/commit/b7251e7ce3bf2565251f1fa5d35e08cef9c49d41.patch
-git apply *.patch
-cd ../..
-
 echo 'delete vendorsetup.sh from device tree once this is done'
