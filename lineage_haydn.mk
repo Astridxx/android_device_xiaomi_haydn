@@ -14,8 +14,14 @@ $(call inherit-product, device/xiaomi/haydn/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# GAPPS flag
-WITH_GAPPS := 1
+# GAPPS_BUILD_TYPE
+# 0 - NO GAPPS (DEFAULT)
+# 1 - CORE GAPPS
+# 2 - FULL GAPPS
+WITH_GAPPS := 2
+
+# Valid for core/full GAPPS (default=true)
+TARGET_USE_GOOGLE_TELEPHONY := false
 
 # Alpha prop
 ALPHA_BUILD_TYPE := unofficial
@@ -30,11 +36,16 @@ PRODUCT_NAME := lineage_haydn
 PRODUCT_SYSTEM_NAME := haydn_global
 PRODUCT_SYSTEM_DEVICE := haydn
 
-# Alpha device prop
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_EXCLUDES_AUDIOFX := true
+
+# Alpha internal properties
+TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
-TARGET_EXCLUDES_APERTURE := true
+TARGET_INCLUDE_MATLOG := false
+TARGET_USE_PIXEL_LAUNCHER := false
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="haydn_global-user 13 TKQ1.220829.002 V14.0.3.0.TKKMIXM release-keys" \
