@@ -48,4 +48,11 @@ wget https://raw.githubusercontent.com/Astridxx/Patch-Haydn/main/Pixys/0001-Fix-
 patch -p1 <0001-Fix-naming-conflict-with-vendor-libs.patch
 cd ../..
 
+# Audio
+echo 'Adding audio-app support'
+cd system/core
+wget https://raw.githubusercontent.com/Astridxx/Patch-Haydn/main/Pixys/0002-Add-audio-app-support.patch
+patch -p1 <0002-Add-audio-app-support.patch
+cd ../..
+
 echo 'delete vendorsetup.sh from device tree once this is done'
