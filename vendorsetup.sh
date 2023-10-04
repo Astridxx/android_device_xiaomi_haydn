@@ -69,4 +69,11 @@ wget https://raw.githubusercontent.com/Astridxx/Patch-Haydn/main/Octavi/0004-Fix
 patch -p1 <0004-Fix-naming-conflict-with-vendor-libs.patch
 cd ../..
 
+# Audio
+echo 'Adding audio-app support'
+cd system/core
+wget https://raw.githubusercontent.com/Astridxx/Patch-Haydn/main/Octavi/0005-Add-audio-app-support.patch
+patch -p1 <0005-Add-audio-app-support.patch
+cd ../..
+
 echo 'delete vendorsetup.sh from device tree once this is done'
