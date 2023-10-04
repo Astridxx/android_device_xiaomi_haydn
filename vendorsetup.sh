@@ -53,7 +53,9 @@ cd ../..
 echo 'Adding lowest possible refresh rate in doze mode'
 cd frameworks/native
 wget https://raw.githubusercontent.com/Astridxx/Patch-Haydn/main/Octavi/0002-Use-lowest-possible-refresh-rate-in-doze-mode.patch
+wget https://raw.githubusercontent.com/Astridxx/Patch-Haydn/main/Octavi/0006-Revert-Always-provide-metadata-blob-for-hdr-frames.patch
 patch -p1 <0002-Use-lowest-possible-refresh-rate-in-doze-mode.patch
+patch -p1 <0006-Revert-Always-provide-metadata-blob-for-hdr-frames.patch
 cd ../..
 
 echo 'Adding Slowmo fix for Leica camera'
